@@ -1,5 +1,5 @@
-[Dd]ebug*
-[Rr]elease*
+#[Dd]ebug*
+#[Rr]elease*
 *.ncb
 *.suo
 *.sdf
@@ -11,8 +11,8 @@
 *.vcxproj.user
 *.obj
 *.pdb
-Release/
-Debug/
+#Release/
+#Debug/
 *.idb
 *.pch
 *.ncb
@@ -34,3 +34,5 @@ translations/*.mo
 packages
 pascal/lib/
 pascal/backup/
+
+3rdparty/wxWidgets/
