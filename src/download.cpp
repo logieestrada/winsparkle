@@ -216,7 +216,6 @@ void DownloadFile(const std::string& url, IDownloadSink *sink, Thread *onThread,
 
     DownloadCallbackContext context(&conn);
     inet.SetStatusCallback(&DownloadInternetStatusCallback);
-
     HINTERNET conn_raw = InternetOpenUrlA
                          (
                              inet,

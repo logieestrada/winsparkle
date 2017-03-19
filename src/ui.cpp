@@ -940,7 +940,6 @@ void UpdateDialog::StateUpdateDownloaded(const std::wstring& updateFile, const s
 
     m_updateFile = updateFile;
     m_installerArguments = installerArguments;
-
     if ( m_installAutomatically )
     {
         wxCommandEvent nullEvent;

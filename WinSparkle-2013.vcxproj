@@ -100,6 +100,11 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>comctl32.lib;kernel32.lib;user32.lib;rpcrt4.lib;version.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y $(TargetDir)WinSparkle.* ..\winsparkle-0.5.3\$(Configuration)\
+xcopy /y $(TargetDir)lib* ..\winsparkle-0.5.3\$(Configuration)\
+xcopy /y $(TargetDir)verifyrsa.* ..\winsparkle-0.5.3\$(Configuration)\</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -149,6 +154,11 @@
       <AdditionalDependencies>comctl32.lib;kernel32.lib;user32.lib;rpcrt4.lib;version.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y $(TargetDir)WinSparkle.* ..\winsparkle-0.5.3\$(Configuration)\
+xcopy /y $(TargetDir)lib* ..\winsparkle-0.5.3\$(Configuration)\
+xcopy /y $(TargetDir)verifyrsa.* ..\winsparkle-0.5.3\$(Configuration)\</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -192,6 +202,7 @@
     <ClCompile Include="src\updatedownloader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\verifyrsa.h" />
     <ClInclude Include="include\winsparkle.h" />
     <ClInclude Include="include\winsparkle-version.h" />
     <ClInclude Include="src\appcast.h" />
@@ -215,6 +226,9 @@
     </ProjectReference>
     <ProjectReference Include="3rdparty\wx-2013.vcxproj">
       <Project>{499a5238-5aac-5fd3-8902-819d787108a5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="verifyrsa\verifyrsa.vcxproj">
+      <Project>{57804723-d9ec-4105-b127-95ffa58d88b0}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5D6786
 		packages.config = packages.config
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "verifyrsa", "verifyrsa\verifyrsa.vcxproj", "{57804723-D9EC-4105-B127-95FFA58D88B0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "verifyrsaT", "verifyrsaT\verifyrsaT.vcxproj", "{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -65,6 +69,18 @@ Global
 		{AFBD6C55-82AB-5746-BABD-D254BE893418}.Release|Win32.Build.0 = Release|Win32
 		{AFBD6C55-82AB-5746-BABD-D254BE893418}.Release|x64.ActiveCfg = Release|x64
 		{AFBD6C55-82AB-5746-BABD-D254BE893418}.Release|x64.Build.0 = Release|x64
+		{57804723-D9EC-4105-B127-95FFA58D88B0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{57804723-D9EC-4105-B127-95FFA58D88B0}.Debug|Win32.Build.0 = Debug|Win32
+		{57804723-D9EC-4105-B127-95FFA58D88B0}.Debug|x64.ActiveCfg = Debug|Win32
+		{57804723-D9EC-4105-B127-95FFA58D88B0}.Release|Win32.ActiveCfg = Release|Win32
+		{57804723-D9EC-4105-B127-95FFA58D88B0}.Release|Win32.Build.0 = Release|Win32
+		{57804723-D9EC-4105-B127-95FFA58D88B0}.Release|x64.ActiveCfg = Release|Win32
+		{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}.Debug|Win32.Build.0 = Debug|Win32
+		{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}.Debug|x64.ActiveCfg = Debug|Win32
+		{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}.Release|Win32.ActiveCfg = Release|Win32
+		{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}.Release|Win32.Build.0 = Release|Win32
+		{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

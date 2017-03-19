@@ -66,20 +66,22 @@ namespace
 #define OS_MARKER       "windows"
 #define OS_MARKER_LEN   7
 
+// for signature
+#define ATTR_SIGNATURE NS_SPARKLE_NAME("rsaSignature")
 // context data for the parser
 struct ContextData
 {
     ContextData(XML_Parser& p)
         : parser(p),
         in_channel(0), in_item(0), in_relnotes(0), in_title(0), in_description(0), in_link(0),
-        in_version(0), in_shortversion(0), in_min_os_version(0)
+		in_version(0), in_shortversion(0), in_min_os_version(0), in_rsa_signature(0)
     {}
 
     // the parser we're using
     XML_Parser& parser;
 
     // is inside <channel>, <item> or <sparkle:releaseNotesLink>, <title>, <description>, or <link> respectively?
-    int in_channel, in_item, in_relnotes, in_title, in_description, in_link;
+    int in_channel, in_item, in_relnotes, in_title, in_description, in_link, in_rsa_signature;
 
     // is inside <sparkle:version> or <sparkle:shortVersionString> node?
     int in_version, in_shortversion, in_min_os_version;
@@ -170,6 +172,8 @@ void XMLCALL OnStartElement(void *data, const char *name, const char **attrs)
                     ctxt.items[size-1].Os = value;
                 else if ( strcmp(name, ATTR_ARGUMENTS) == 0 )
                     ctxt.items[size-1].InstallerArguments = value;
+				else if (strcmp(name, ATTR_SIGNATURE) == 0)
+					ctxt.items[size - 1].RSASignature = value;
             }
         }
     }
@@ -272,6 +276,8 @@ void XMLCALL OnText(void *data, const char *s, int len)
         ctxt.items[size - 1].ShortVersionString.append(s, len);
     else if ( ctxt.in_min_os_version )
         ctxt.items[size - 1].MinOSVersion.append(s, len);
+	else if (ctxt.in_rsa_signature)
+		ctxt.items[size - 1].RSASignature.append(s, len);
 }
 
 } // anonymous namespace

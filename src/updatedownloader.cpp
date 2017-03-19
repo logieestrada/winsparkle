@@ -35,6 +35,14 @@
 #include <rpc.h>
 #include <time.h>
 
+// for verifiying rsa signature
+#include "verifyrsa.h"
+#include "publicKey.h"
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <cstdint>
+
 namespace winsparkle
 {
 
@@ -44,6 +52,39 @@ namespace winsparkle
 
 namespace
 {
+
+bool readFileContents(const std::wstring& filePath, std::vector<uint8_t>& container)
+{
+	bool bret = true;
+	// read the signature and message
+	std::ifstream is(filePath.c_str(), std::ios::binary);
+
+	if (is.is_open())
+	{
+		is.seekg(0, std::ios::end);
+		size_t len = is.tellg();
+		is.seekg(0, std::ios::beg);
+		container.resize(len);
+		try 
+		{
+			is.read(reinterpret_cast<char*>(container.data()), len);
+		}
+		catch (const std::exception& e)                                 
+		{    
+			is.close();
+			bret = false;
+			winsparkle::LogError(e.what());                             
+		}                                                               
+		catch (...) {  
+			is.close();
+			bret = false;
+			winsparkle::LogError("Unknown error.");
+		}
+		is.close();
+	}
+
+	return bret;
+}
 
 std::wstring GetUniqueTempDirectoryPrefix()
 {
@@ -174,10 +215,52 @@ void UpdateDownloader::Run()
       const std::wstring tmpdir = CreateUniqueTempDirectory();
       Settings::WriteConfigValue("UpdateTempDir", tmpdir);
 
-      UpdateDownloadSink sink(*this, tmpdir);
+	  std::string downloadUrlSig = m_appcast.DownloadURL;
+	  std::string base64Signature = m_appcast.RSASignature;
+	  //std::wstring signaturePath;
+
+	  //  dont have to download a separate file now
+	  //if (downloadUrlSig.find_last_of("exe") != std::string::npos)
+	  //{
+		 // // modify to download the signature file first
+		 // downloadUrlSig += ".sig";
+		 // UpdateDownloadSink sigSink(*this, tmpdir);
+		 // DownloadFile(downloadUrlSig, &sigSink, this);
+		 // sigSink.Close();
+		 // signaturePath = sigSink.GetFilePath();
+		 // std::string rsaSignature = m_appcast.RSASignature;
+	  //}
+	  
+	  UpdateDownloadSink sink(*this, tmpdir);
       DownloadFile(m_appcast.DownloadURL, &sink, this);
       sink.Close();
-      UI::NotifyUpdateDownloaded(sink.GetFilePath(), m_appcast);
+
+	  bool validPayload = false;
+
+	  if (base64Signature.length() != 0)
+	  {
+		  std::vector<uint8_t> message, signature(base64Signature.begin(),base64Signature.end());
+		  // read  file contents into message
+		  if (readFileContents(sink.GetFilePath(), message))
+		  {
+			  validPayload = verifyRSASignature(publicKey.data(), 
+				  publicKey.length(), 
+				  reinterpret_cast<unsigned char*>(message.data()), 
+				  message.size(), 
+				  reinterpret_cast<unsigned char *>(signature.data()),
+				  signature.size());
+		  }
+	  }
+
+	  if (validPayload) 
+	  {
+		  UI::NotifyUpdateDownloaded(sink.GetFilePath(), m_appcast);
+	  }
+	  else 
+	  {
+		  LogError("Payload Signature validation failure.");
+		  UI::NotifyUpdateError();
+	  }
     }
     catch ( ... )
     {
