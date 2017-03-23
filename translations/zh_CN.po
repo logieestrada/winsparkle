@@ -82,8 +82,8 @@ msgid "Update Error!"
 msgstr "更新错误！"
 
 #: src/ui.cpp:682
-msgid "An error occurred in retrieving update information; are you connected to the internet? Please try again later."
-msgstr "检索更新信息时发生错误；您已经连接互联网了吗？请稍候再试。"
+msgid "An error occurred in retrieving update information. Are you connected to the internet? Please try again later."
+msgstr "检索更新信息时发生错误。您已经连接互联网了吗？请稍候再试。"
 
 #: src/ui.cpp:723
 #, c-format

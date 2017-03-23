@@ -82,8 +82,8 @@ msgid "Update Error!"
 msgstr "Errore cù u Rinnovu !"
 
 #: src/ui.cpp:682
-msgid "An error occurred in retrieving update information; are you connected to the internet? Please try again later."
-msgstr "Un errore s'hè affacatu mentre a ricerca di l'infurmazione di u rinnovu ; site cunnettu à Internet ? Provate torna un altra volta."
+msgid "An error occurred in retrieving update information. Are you connected to the internet? Please try again later."
+msgstr "Un errore s'hè affacatu mentre a ricerca di l'infurmazione di u rinnovu . Site cunnettu à Internet ? Provate torna un altra volta."
 
 #: src/ui.cpp:723
 #, c-format

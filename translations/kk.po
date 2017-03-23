@@ -82,8 +82,8 @@ msgid "Update Error!"
 msgstr "Жаңарту қатесі!"
 
 #: src/ui.cpp:682
-msgid "An error occurred in retrieving update information; are you connected to the internet? Please try again later."
-msgstr "Жаңарта ақпаратын алу кезінде қате орын алды; сіз интернетке байланысқансыз ба? Кейінірек қайталап көріңіз."
+msgid "An error occurred in retrieving update information. Are you connected to the internet? Please try again later."
+msgstr "Жаңарта ақпаратын алу кезінде қате орын алды. сіз интернетке байланысқансыз ба? Кейінірек қайталап көріңіз."
 
 #: src/ui.cpp:723
 #, c-format

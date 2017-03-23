@@ -81,8 +81,8 @@ msgid "Update Error!"
 msgstr "Galat Pemutakhiran!"
 
 #: src/ui.cpp:682
-msgid "An error occurred in retrieving update information; are you connected to the internet? Please try again later."
-msgstr "Terjadi galat dalam pengambilan informasi pemutakhiran; apakah Anda tersambung ke internet? Harap coba lagi nanti."
+msgid "An error occurred in retrieving update information. Are you connected to the internet? Please try again later."
+msgstr "Terjadi galat dalam pengambilan informasi pemutakhiran. Apakah Anda tersambung ke internet? Harap coba lagi nanti."
 
 #: src/ui.cpp:723
 #, c-format

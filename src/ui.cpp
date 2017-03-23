@@ -796,7 +796,7 @@ void UpdateDialog::StateUpdateError()
 
     m_heading->SetLabel(_("Update Error!"));
 
-    wxString msg = _("An error occurred in retrieving update information; are you connected to the internet? Please try again later.");
+    wxString msg = _("An error occurred in retrieving update information. Are you connected to the internet? Please try again later.");
     SetMessage(msg);
 
     m_closeButton->SetLabel(_("Cancel"));

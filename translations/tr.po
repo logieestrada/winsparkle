@@ -82,8 +82,8 @@ msgid "Update Error!"
 msgstr "Güncelleme Hatası!"
 
 #: src/ui.cpp:682
-msgid "An error occurred in retrieving update information; are you connected to the internet? Please try again later."
-msgstr "Güncelleme bilgisi alınırken bir hata meydana geldi; internet'e bağlı mısınız? Lütfen daha sonra tekrar deneyin."
+msgid "An error occurred in retrieving update information. Are you connected to the internet? Please try again later."
+msgstr "Güncelleme bilgisi alınırken bir hata meydana geldi. Internet'e bağlı mısınız? Lütfen daha sonra tekrar deneyin."
 
 #: src/ui.cpp:723
 #, c-format

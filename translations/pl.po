@@ -82,7 +82,7 @@ msgid "Update Error!"
 msgstr "Błąd aktualizacji!"
 
 #: src/ui.cpp:682
-msgid "An error occurred in retrieving update information; are you connected to the internet? Please try again later."
+msgid "An error occurred in retrieving update information. Are you connected to the internet? Please try again later."
 msgstr "Wystąpił błąd podczas pobierania informacji o aktualizacji. Czy jesteś podłączony do Internetu? Prosimy spróbować ponownie później."
 
 #: src/ui.cpp:723

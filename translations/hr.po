@@ -82,8 +82,8 @@ msgid "Update Error!"
 msgstr "Pogreška pri ažuriranju!"
 
 #: src/ui.cpp:682
-msgid "An error occurred in retrieving update information; are you connected to the internet? Please try again later."
-msgstr "Pojavila se pogreška u dohvaćanju ažuriranja; da li si spojen na internet? Pokušaj ponovo kasnije."
+msgid "An error occurred in retrieving update information. Are you connected to the internet? Please try again later."
+msgstr "Pojavila se pogreška u dohvaćanju ažuriranja. Da li si spojen na internet? Pokušaj ponovo kasnije."
 
 #: src/ui.cpp:723
 #, c-format

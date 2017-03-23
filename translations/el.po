@@ -82,8 +82,8 @@ msgid "Update Error!"
 msgstr "Σφάλμα ενημέρωσης!"
 
 #: src/ui.cpp:682
-msgid "An error occurred in retrieving update information; are you connected to the internet? Please try again later."
-msgstr "Παρουσιάστηκε σφάλμα στον έλεγχο ενημερώσεων· υπάρχει σύνδεση με το Διαδίκτυο; Παρακαλώ προσπαθήστε ξανά αργότερα."
+msgid "An error occurred in retrieving update information. Are you connected to the internet? Please try again later."
+msgstr "Παρουσιάστηκε σφάλμα στον έλεγχο ενημερώσεων· υπάρχει σύνδεση με το Διαδίκτυο. Παρακαλώ προσπαθήστε ξανά αργότερα."
 
 #: src/ui.cpp:723
 #, c-format

@@ -81,8 +81,8 @@ msgid "Update Error!"
 msgstr "Eguneraketa Akatsa!"
 
 #: src/ui.cpp:682
-msgid "An error occurred in retrieving update information; are you connected to the internet? Please try again later."
-msgstr "Akats bat gertatu da eguneraketa argibideak berreskuratzean; zihur zaude internetera elkartuta zaudela? Mesedez saiatu berriro geroago."
+msgid "An error occurred in retrieving update information. Are you connected to the internet? Please try again later."
+msgstr "Akats bat gertatu da eguneraketa argibideak berreskuratzean. Zihur zaude internetera elkartuta zaudela? Mesedez saiatu berriro geroago."
 
 #: src/ui.cpp:723
 #, c-format

@@ -82,8 +82,8 @@ msgid "Update Error!"
 msgstr "Updatefout!"
 
 #: src/ui.cpp:682
-msgid "An error occurred in retrieving update information; are you connected to the internet? Please try again later."
-msgstr "Er is een fout opgetreden bij het ophalen van updategegevens; bent u verbonden met het internet? Probeer het later nog eens."
+msgid "An error occurred in retrieving update information. Are you connected to the internet? Please try again later."
+msgstr "Er is een fout opgetreden bij het ophalen van updategegevens. Bent u verbonden met het internet? Probeer het later nog eens."
 
 #: src/ui.cpp:723
 #, c-format

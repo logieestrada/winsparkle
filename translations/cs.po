@@ -81,7 +81,7 @@ msgid "Update Error!"
 msgstr "Chyba aktualizace!"
 
 #: src/ui.cpp:682
-msgid "An error occurred in retrieving update information; are you connected to the internet? Please try again later."
+msgid "An error occurred in retrieving update information. Are you connected to the internet? Please try again later."
 msgstr "Při načítání informací o aktualizaci došlo k chybě. Jste připojeni k Internetu? Opakujte akci později."
 
 #: src/ui.cpp:723
