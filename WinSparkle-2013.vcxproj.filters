@@ -53,7 +53,7 @@
     <ClInclude Include="src\utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\verifyrsa.h">
+    <ClInclude Include="src\signatureverifier.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -91,6 +91,9 @@
     <ClCompile Include="src\updatedownloader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\signatureverifier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="src\winsparkle.rc">
@@ -99,8 +102,5 @@
     <ResourceCompile Include="translations\translations.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="WinSparkle.Targets" />
   </ItemGroup>
 </Project>

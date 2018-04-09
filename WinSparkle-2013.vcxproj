@@ -87,12 +87,12 @@
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;XML_STATIC;BUILDING_WIN_SPARKLE;WIN32;_DEBUG;WINSPARKLE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\openssl-win32;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\openssl-win32;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;XML_STATIC;BUILDING_WIN_SPARKLE;_UNICODE;UNICODE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
@@ -100,11 +100,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>comctl32.lib;kernel32.lib;user32.lib;rpcrt4.lib;version.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /y $(TargetDir)WinSparkle.* ..\winsparkle-0.5.3\$(Configuration)\
-xcopy /y $(TargetDir)lib* ..\winsparkle-0.5.3\$(Configuration)\
-xcopy /y $(TargetDir)verifyrsa.* ..\winsparkle-0.5.3\$(Configuration)\</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -113,11 +108,11 @@ xcopy /y $(TargetDir)verifyrsa.* ..\winsparkle-0.5.3\$(Configuration)\</Command>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;XML_STATIC;BUILDING_WIN_SPARKLE;WIN32;_DEBUG;WINSPARKLE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\openssl-win32;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\openssl-win32;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;XML_STATIC;BUILDING_WIN_SPARKLE;_UNICODE;UNICODE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
@@ -135,7 +130,7 @@ xcopy /y $(TargetDir)verifyrsa.* ..\winsparkle-0.5.3\$(Configuration)\</Command>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;XML_STATIC;BUILDING_WIN_SPARKLE;WIN32;NDEBUG;WINSPARKLE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\openssl-win32;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
@@ -143,7 +138,7 @@ xcopy /y $(TargetDir)verifyrsa.* ..\winsparkle-0.5.3\$(Configuration)\</Command>
       <StringPooling>true</StringPooling>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\openssl-win32;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;XML_STATIC;BUILDING_WIN_SPARKLE;_UNICODE;UNICODE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
@@ -154,11 +149,6 @@ xcopy /y $(TargetDir)verifyrsa.* ..\winsparkle-0.5.3\$(Configuration)\</Command>
       <AdditionalDependencies>comctl32.lib;kernel32.lib;user32.lib;rpcrt4.lib;version.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /y $(TargetDir)WinSparkle.* ..\winsparkle-0.5.3\$(Configuration)\
-xcopy /y $(TargetDir)lib* ..\winsparkle-0.5.3\$(Configuration)\
-xcopy /y $(TargetDir)verifyrsa.* ..\winsparkle-0.5.3\$(Configuration)\</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -169,14 +159,14 @@ xcopy /y $(TargetDir)verifyrsa.* ..\winsparkle-0.5.3\$(Configuration)\</Command>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;XML_STATIC;BUILDING_WIN_SPARKLE;WIN32;NDEBUG;WINSPARKLE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\openssl-win32;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <StringPooling>true</StringPooling>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>3rdparty\expat\expat\lib;3rdparty\openssl-win32;3rdparty\wxWidgets_setup_h;3rdparty\wxWidgets\include;include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;XML_STATIC;BUILDING_WIN_SPARKLE;_UNICODE;UNICODE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
@@ -200,9 +190,9 @@ xcopy /y $(TargetDir)verifyrsa.* ..\winsparkle-0.5.3\$(Configuration)\</Command>
     <ClCompile Include="src\ui.cpp" />
     <ClCompile Include="src\updatechecker.cpp" />
     <ClCompile Include="src\updatedownloader.cpp" />
+    <ClCompile Include="src\signatureverifier.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\verifyrsa.h" />
     <ClInclude Include="include\winsparkle.h" />
     <ClInclude Include="include\winsparkle-version.h" />
     <ClInclude Include="src\appcast.h" />
@@ -215,6 +205,7 @@ xcopy /y $(TargetDir)verifyrsa.* ..\winsparkle-0.5.3\$(Configuration)\</Command>
     <ClInclude Include="src\updatechecker.h" />
     <ClInclude Include="src\updatedownloader.h" />
     <ClInclude Include="src\utils.h" />
+    <ClInclude Include="src\signatureverifier.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="src\winsparkle.rc" />
@@ -224,11 +215,11 @@ xcopy /y $(TargetDir)verifyrsa.* ..\winsparkle-0.5.3\$(Configuration)\</Command>
     <ProjectReference Include="3rdparty\expat-2013.vcxproj">
       <Project>{47b228cb-24fe-5250-b1fc-dfc81d3e69df}</Project>
     </ProjectReference>
+    <ProjectReference Include="3rdparty\libcrypto-2013.vcxproj">
+      <Project>{a0326e8b-57a0-548e-ab4a-2db2b6704d70}</Project>
+    </ProjectReference>
     <ProjectReference Include="3rdparty\wx-2013.vcxproj">
       <Project>{499a5238-5aac-5fd3-8902-819d787108a5}</Project>
-    </ProjectReference>
-    <ProjectReference Include="verifyrsa\verifyrsa.vcxproj">
-      <Project>{57804723-d9ec-4105-b127-95ffa58d88b0}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

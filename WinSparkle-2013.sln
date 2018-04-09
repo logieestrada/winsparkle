@@ -6,10 +6,13 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinSparkle", "WinSparkle-2013.vcxproj", "{524CCCF2-61EA-5B64-A1D9-FF5497027B5F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{47B228CB-24FE-5250-B1FC-DFC81D3E69DF} = {47B228CB-24FE-5250-B1FC-DFC81D3E69DF}
+		{A0326E8B-57A0-548E-AB4A-2DB2B6704D70} = {A0326E8B-57A0-548E-AB4A-2DB2B6704D70}
 		{499A5238-5AAC-5FD3-8902-819D787108A5} = {499A5238-5AAC-5FD3-8902-819D787108A5}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinSparkle_expat", "3rdparty\expat-2013.vcxproj", "{47B228CB-24FE-5250-B1FC-DFC81D3E69DF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinSparkle_libcrypto", "3rdparty\libcrypto-2013.vcxproj", "{A0326E8B-57A0-548E-AB4A-2DB2B6704D70}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinSparkle_wx", "3rdparty\wx-2013.vcxproj", "{499A5238-5AAC-5FD3-8902-819D787108A5}"
 EndProject
@@ -24,10 +27,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5D6786
 	ProjectSection(SolutionItems) = preProject
 		packages.config = packages.config
 	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "verifyrsa", "verifyrsa\verifyrsa.vcxproj", "{57804723-D9EC-4105-B127-95FFA58D88B0}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "verifyrsaT", "verifyrsaT\verifyrsaT.vcxproj", "{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +52,14 @@ Global
 		{47B228CB-24FE-5250-B1FC-DFC81D3E69DF}.Release|Win32.Build.0 = Release|Win32
 		{47B228CB-24FE-5250-B1FC-DFC81D3E69DF}.Release|x64.ActiveCfg = Release|x64
 		{47B228CB-24FE-5250-B1FC-DFC81D3E69DF}.Release|x64.Build.0 = Release|x64
+		{A0326E8B-57A0-548E-AB4A-2DB2B6704D70}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A0326E8B-57A0-548E-AB4A-2DB2B6704D70}.Debug|Win32.Build.0 = Debug|Win32
+		{A0326E8B-57A0-548E-AB4A-2DB2B6704D70}.Debug|x64.ActiveCfg = Debug|x64
+		{A0326E8B-57A0-548E-AB4A-2DB2B6704D70}.Debug|x64.Build.0 = Debug|x64
+		{A0326E8B-57A0-548E-AB4A-2DB2B6704D70}.Release|Win32.ActiveCfg = Release|Win32
+		{A0326E8B-57A0-548E-AB4A-2DB2B6704D70}.Release|Win32.Build.0 = Release|Win32
+		{A0326E8B-57A0-548E-AB4A-2DB2B6704D70}.Release|x64.ActiveCfg = Release|x64
+		{A0326E8B-57A0-548E-AB4A-2DB2B6704D70}.Release|x64.Build.0 = Release|x64
 		{499A5238-5AAC-5FD3-8902-819D787108A5}.Debug|Win32.ActiveCfg = Debug|Win32
 		{499A5238-5AAC-5FD3-8902-819D787108A5}.Debug|Win32.Build.0 = Debug|Win32
 		{499A5238-5AAC-5FD3-8902-819D787108A5}.Debug|x64.ActiveCfg = Debug|x64
@@ -69,24 +76,13 @@ Global
 		{AFBD6C55-82AB-5746-BABD-D254BE893418}.Release|Win32.Build.0 = Release|Win32
 		{AFBD6C55-82AB-5746-BABD-D254BE893418}.Release|x64.ActiveCfg = Release|x64
 		{AFBD6C55-82AB-5746-BABD-D254BE893418}.Release|x64.Build.0 = Release|x64
-		{57804723-D9EC-4105-B127-95FFA58D88B0}.Debug|Win32.ActiveCfg = Debug|Win32
-		{57804723-D9EC-4105-B127-95FFA58D88B0}.Debug|Win32.Build.0 = Debug|Win32
-		{57804723-D9EC-4105-B127-95FFA58D88B0}.Debug|x64.ActiveCfg = Debug|Win32
-		{57804723-D9EC-4105-B127-95FFA58D88B0}.Release|Win32.ActiveCfg = Release|Win32
-		{57804723-D9EC-4105-B127-95FFA58D88B0}.Release|Win32.Build.0 = Release|Win32
-		{57804723-D9EC-4105-B127-95FFA58D88B0}.Release|x64.ActiveCfg = Release|Win32
-		{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}.Debug|Win32.ActiveCfg = Debug|Win32
-		{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}.Debug|Win32.Build.0 = Debug|Win32
-		{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}.Debug|x64.ActiveCfg = Debug|Win32
-		{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}.Release|Win32.ActiveCfg = Release|Win32
-		{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}.Release|Win32.Build.0 = Release|Win32
-		{A0ACA4E7-BAFC-45DB-8903-16975911FD4D}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{47B228CB-24FE-5250-B1FC-DFC81D3E69DF} = {2C4E4846-FF11-55AD-AFD1-BC1F3AF74724}
+		{A0326E8B-57A0-548E-AB4A-2DB2B6704D70} = {2C4E4846-FF11-55AD-AFD1-BC1F3AF74724}
 		{499A5238-5AAC-5FD3-8902-819D787108A5} = {2C4E4846-FF11-55AD-AFD1-BC1F3AF74724}
 	EndGlobalSection
 EndGlobal

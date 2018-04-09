@@ -80,7 +80,7 @@ msgstr ""
 
 #: src/ui.cpp:686
 msgid ""
-"An error occurred in retrieving update information. Are you connected to the "
+"An error occurred in retrieving update information; are you connected to the "
 "internet? Please try again later."
 msgstr ""
 
